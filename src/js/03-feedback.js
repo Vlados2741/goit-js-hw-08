@@ -41,9 +41,8 @@ const onSubmitForm = (e) => {
     localStorage.removeItem("feedback-form-state");
     
 };
-refs.form.addEventListener(`input`, throttle(onFormInput, 500));
+refs.form.addEventListener(`input`, onFormInput);
  
 
 
 refs.form.addEventListener(`submit`, onSubmitForm);
-
