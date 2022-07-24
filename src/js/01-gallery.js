@@ -21,7 +21,7 @@ const createImagesList = galleryItems.map(image =>
 refs.gallery.insertAdjacentHTML("beforeend", createImagesList);
 
 const lightbox = new SimpleLightbox('.gallery a', {
-    docClose: false,
-    captionsData: "alt",
-    captionDelay: 250,
+  docClose: true,
+  captionsData: "alt",
+  captionDelay: 250,
 });
