@@ -11,4 +11,12 @@ const noteTime = function (data) {
 
 player.on('timeupdate', _.throttle(noteTime, 1000));
 
-player.setCurrentTime(localStorage.getItem("videoplayer-current-time"));
+player.setCurrentTime(localStorage.getItem("videoplayer-current-time")).then(function(seconds) {
+}).catch(function(error) {
+    switch (error.name) {
+        case 'RangeError':
+            break;
+        default:
+            break;
+    }
+});

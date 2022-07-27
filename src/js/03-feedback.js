@@ -36,13 +36,15 @@ const onSubmitForm = (e) => {
         email: email.value,
         message: message.value
     }
+    if (email.value === "" || user.message === "") {
+        alert("Заполните все поля")
+    } else {
     console.log(user);
     e.target.reset();
     localStorage.removeItem("feedback-form-state");
-    
+    };
 };
+
 refs.form.addEventListener(`input`, onFormInput);
  
-
-
 refs.form.addEventListener(`submit`, onSubmitForm);
